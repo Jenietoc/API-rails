@@ -50,3 +50,8 @@ group :test do
   gem 'faker'
   gem 'database_cleaner'
 end
+
+# Use ActiveModel has_secure_password
+gem 'bcrypt', '~> 3.1.7'
+
+gem 'jwt'
