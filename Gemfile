@@ -40,6 +40,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development, :test do
+  gem 'faker'
   gem 'rspec-rails', '~> 5.0.0'
 end
 
@@ -49,3 +50,10 @@ group :test do
   gem 'faker'
   gem 'database_cleaner'
 end
+
+# Use ActiveModel has_secure_password
+gem 'bcrypt', '~> 3.1.7'
+
+gem 'jwt'
+
+gem 'active_model_serializers', '~> 0.10.0'
