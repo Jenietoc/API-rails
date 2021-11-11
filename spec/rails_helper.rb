@@ -65,6 +65,8 @@ end
 
 # require database cleaner at the top level
 require 'database_cleaner'
+require 'support/request_spec_helper'
+require 'support/controller_spec_helper'
 
 # [...]
 # configure shoulda matchers to use rspec as the test framework and full matcher libraries for rails
@@ -80,6 +82,9 @@ RSpec.configure do |config|
   # [...]
   # add `FactoryBot` methods
   config.include FactoryBot::Syntax::Methods
+
+  config.include RequestSpecHelper
+  config.include ControllerSpecHelper
 
   # start by truncating all the tables but then use the faster transaction strategy the rest of the time.
   config.before(:suite) do
